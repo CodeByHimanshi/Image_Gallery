@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif !important;
+}
+
+.container-fluid {
+  overflow: hidden;
+}
+.container-fluid .grid-row {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: 1fr;
+  row-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  padding: 5px 0;
+}
+.container-fluid .grid-row .item {
+  height: 100%;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.container-fluid .grid-row .item img {
+  width: 100%;
+}
+.container-fluid .grid-row .item .full-img {
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6941176471);
+  top: 0;
+  text-align: center;
+  padding-top: 30px;
+  display: none;
+}
+.container-fluid .grid-row .item .full-img img {
+  width: 800px;
+}
+.container-fluid .grid-row .item .full-img .close-btn {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  right: 45px;
+  top: 12px;
+  z-index: 99;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+.container-fluid .grid-row .item .full-img #right::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+.container-fluid .grid-row .item .full-img #left::after {
+  content: "\f053";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+
+@media (max-width: 480px) {
+  .grid-row {
+    grid-template-columns: repeat(1, 100%) !important;
+  }
+  .full-img img {
+    width: 90% !important;
+    margin-top: 100px;
+  }
+  .full-img #right::after {
+    right: 20px !important;
+  }
+  .full-img #left::after {
+    left: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+  .grid-row {
+    grid-template-columns: repeat(2, 50%) !important;
+  }
+  .full-img img {
+    width: 90% !important;
+    margin-top: 100px;
+  }
+  .full-img #right::after {
+    right: 20px !important;
+  }
+  .full-img #left::after {
+    left: 20px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
